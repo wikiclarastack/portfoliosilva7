@@ -2,58 +2,47 @@
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8">
-  <title>Silva777only | Portfólio</title>
+  <title>Silva777only | Portfolio</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
 <header>
+  <div class="logo">Silva777only</div>
   <nav>
-    <h1>Silva777only</h1>
-    <ul>
-      <li><a href="#sobre">Sobre</a></li>
-      <li><a href="#projetos">Projetos</a></li>
-      <li><a href="#sites">Sites</a></li>
-      <li><a href="#contato">Contato</a></li>
-    </ul>
+    <button onclick="setLang('pt')">PT</button>
+    <button onclick="setLang('en')">EN</button>
+    <a href="#home">Home</a>
+    <a href="#projects">Projetos</a>
+    <a href="#actors">Atores</a>
+    <a href="#support">Suporte</a>
+    <a href="#admin">Admin</a>
   </nav>
 </header>
 
-<section class="hero" id="sobre">
-  <div>
-    <h2>Guilherme <span>Silva</span></h2>
-    <p>Mais conhecido como <strong>Silva777only</strong><br>
-    São Paulo - Zona Oeste</p>
-
-    <p class="faith">✝️ Amo Jesus Cristo, sou evangélico</p>
-
-    <p>
-      +5 anos de experiência em <strong>Lua</strong><br>
-      Conhecimentos em <strong>HTML & JavaScript</strong>
-    </p>
-
-    <p><strong>Sonhos:</strong> Morar nos EUA 🇺🇸 e conhecer a Times Square</p>
-
-    <a class="btn" href="#projetos">Ver Projetos</a>
+<section id="home" class="hero">
+  <div class="hero-text">
+    <h1>Guilherme <span>Silva</span></h1>
+    <p>Desenvolvedor Roblox • Lua • HTML • JS</p>
+    <p class="faith">✝️ Amo Jesus Cristo</p>
+    <div class="stats">
+      <div><strong>5+</strong><span>Anos Lua</span></div>
+      <div><strong>SP</strong><span>Brasil</span></div>
+      <div><strong>NIKE</strong><span>Brand</span></div>
+    </div>
   </div>
-
   <img src="https://tr.rbxcdn.com/180DAY-d006baea70dc015028e3ec50dd3095fb/768/432/Image/Png/noFilter">
 </section>
 
-<section id="projetos">
+<section id="projects">
   <h2>Projetos</h2>
-
-  <div class="grid">
+  <div class="cards">
     <div class="card">
+      <img src="https://media.discordapp.net/attachments/1438682169328402594/1459650794394746921/image.png">
       <h3>Havana Roleplay</h3>
-      <p>Projeto Roblox Roleplay</p>
-      <a class="btn" target="_blank"
-         href="https://www.roblox.com/pt/games/72358924525153/Havana-Roleplay">
-         Acessar
-      </a>
+      <a target="_blank" href="https://www.roblox.com/pt/games/72358924525153/Havana-Roleplay">Abrir</a>
     </div>
-
     <div class="card">
       <h3>Last Owner</h3>
       <p>Em desenvolvimento</p>
@@ -61,41 +50,43 @@
   </div>
 </section>
 
-<section id="sites">
-  <h2>Sites Criados</h2>
-
-  <div class="grid">
-    <a class="card link" target="_blank" href="https://controlprice.squareweb.app">ControlPrice</a>
-    <a class="card link" target="_blank" href="https://nexcorp-henna.vercel.app">NexCorp</a>
-    <a class="card link" target="_blank" href="https://wikiclarastack.github.io/wikiclarastack/">Wiki Clara Stack</a>
+<section id="actors">
+  <h2>Atores Favoritos (IT)</h2>
+  <div class="cards">
+    <div class="card">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT6QugG5ofKXuoum02pKsjIk7aCofHm02nJdA&s">
+      <h3>Matilda Lawler</h3>
+    </div>
+    <div class="card">
+      <img src="https://elcomercio.pe/resizer/v2/ZLEZYAYGJBAYNNIRVWBIOMJ6Z4.jpg">
+      <h3>Clara Stack</h3>
+    </div>
   </div>
 </section>
 
-<section id="contato">
-  <h2>Contato</h2>
-  <button class="btn" onclick="openTicket()">Abrir Ticket</button>
+<section id="support">
+  <h2>Suporte</h2>
+  <input id="ticketEmail" placeholder="Seu email">
+  <select id="ticketReason">
+    <option>Projeto</option>
+    <option>Orçamento</option>
+    <option>Dúvida</option>
+  </select>
+  <textarea id="ticketMsg" placeholder="Mensagem"></textarea>
+  <button onclick="sendTicket()">Enviar Ticket</button>
+  <p id="ticketStatus"></p>
+</section>
+
+<section id="admin">
+  <h2>Admin Login</h2>
+  <input id="adminEmail" placeholder="Email admin">
+  <button onclick="adminLogin()">Entrar</button>
+  <p id="adminStatus"></p>
 </section>
 
 <footer>
-  © 2026 • Silva777only • Nike ❤️
+  © Silva777only • Times Square Dream 🇺🇸
 </footer>
-
-<!-- MODAL -->
-<div class="modal" id="ticketModal">
-  <div class="modal-content">
-    <h3>Abrir Ticket</h3>
-    <input id="email" type="email" placeholder="Seu email">
-    <select id="motivo">
-      <option value="">Selecione o motivo</option>
-      <option>Projeto</option>
-      <option>Orçamento</option>
-      <option>Dúvida</option>
-      <option>Outro</option>
-    </select>
-    <textarea id="mensagem" placeholder="Mensagem"></textarea>
-    <button class="btn" onclick="enviarTicket()">Enviar</button>
-  </div>
-</div>
 
 <script type="module" src="script.js"></script>
 </body>
