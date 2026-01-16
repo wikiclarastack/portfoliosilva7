@@ -1,50 +1,72 @@
-import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-app.js";
-import { getDatabase, ref, push } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-database.js";
-
+// 🔥 FIREBASE CONFIG (COLOQUE SUA KEY AQUI)
 const firebaseConfig = {
-  apiKey: "AIzaSyBFarkcZ4W8lk-GybNyk4Fp4RMMl7cz6Gc",
-  authDomain: "silvaportfolio-6766a.firebaseapp.com",
-  databaseURL: "https://silvaportfolio-6766a-default-rtdb.firebaseio.com",
-  projectId: "silvaportfolio-6766a",
-  storageBucket: "silvaportfolio-6766a.firebasestorage.app",
-  messagingSenderId: "166925374205",
-  appId: "1:166925374205:web:973f9cbf9dced650b16494"
+  apiKey: "SUA_API_KEY",
+  authDomain: "SEU_PROJECT.firebaseapp.com",
+  projectId: "SEU_PROJECT",
 };
 
-const app = initializeApp(firebaseConfig);
-const db = getDatabase(app);
+firebase.initializeApp(firebaseConfig);
 
-// ===== SUPORTE =====
-window.sendTicket = () => {
-  const email = ticketEmail.value;
-  const reason = ticketReason.value;
-  const msg = ticketMsg.value;
+const auth = firebase.auth();
+const db = firebase.firestore();
 
-  if (!email || !msg) {
-    ticketStatus.innerText = "Preencha tudo.";
-    return;
-  }
+// 🔐 LOGIN
+function openLogin() {
+  document.getElementById("loginModal").classList.remove("hidden");
+}
 
-  push(ref(db, "tickets"), {
-    email,
-    reason,
-    msg,
-    date: new Date().toISOString()
+function closeLogin() {
+  document.getElementById("loginModal").classList.add("hidden");
+}
+
+function login() {
+  const email = document.getElementById("email").value;
+  const password = document.getElementById("password").value;
+
+  auth.signInWithEmailAndPassword(email, password)
+    .then(() => {
+      alert("Logado com sucesso");
+      closeLogin();
+    })
+    .catch(err => alert(err.message));
+}
+
+// 🎟️ TICKET
+function openTicket() {
+  document.getElementById("support").scrollIntoView({ behavior: "smooth" });
+  document.getElementById("ticketBox").classList.remove("hidden");
+}
+
+function sendTicket() {
+  const text = document.querySelector("textarea").value;
+
+  db.collection("tickets").add({
+    message: text,
+    email: "guizinbzsk@gmail.com",
+    createdAt: new Date()
   });
 
-  ticketStatus.innerText = "Ticket enviado com sucesso!";
-};
+  alert("Ticket enviado");
+}
 
-// ===== ADMIN =====
-window.adminLogin = () => {
-  const email = adminEmail.value;
-  adminStatus.innerText =
-    email === "guizinbzsk@gmail.com"
-      ? "Admin autenticado"
-      : "Acesso negado (invasor)";
-};
+// 🌍 IDIOMA
+let lang = "pt";
 
-// ===== IDIOMAS =====
-window.setLang = (lang) => {
-  alert(lang === "pt" ? "Português ativo" : "English active");
-};
+function toggleLang() {
+  lang = lang === "pt" ? "en" : "pt";
+
+  document.querySelectorAll("[data-pt]").forEach(el => {
+    el.innerText = el.dataset[lang];
+  });
+}
+
+// ✨ SCROLL ANIMATION
+const reveals = document.querySelectorAll(".reveal");
+
+window.addEventListener("scroll", () => {
+  reveals.forEach(el => {
+    if (el.getBoundingClientRect().top < window.innerHeight - 100) {
+      el.classList.add("active");
+    }
+  });
+});
