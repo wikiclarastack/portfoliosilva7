@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Silva777only | Portfólio</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header>
+  <nav>
+    <h1>Silva777only</h1>
+    <ul>
+      <li><a href="#sobre">Sobre</a></li>
+      <li><a href="#projetos">Projetos</a></li>
+      <li><a href="#sites">Sites</a></li>
+      <li><a href="#contato">Contato</a></li>
+    </ul>
+  </nav>
+</header>
+
+<section class="hero" id="sobre">
+  <div>
+    <h2>Guilherme <span>Silva</span></h2>
+    <p>Mais conhecido como <strong>Silva777only</strong><br>
+    São Paulo - Zona Oeste</p>
+
+    <p class="faith">✝️ Amo Jesus Cristo, sou evangélico</p>
+
+    <p>
+      +5 anos de experiência em <strong>Lua</strong><br>
+      Conhecimentos em <strong>HTML & JavaScript</strong>
+    </p>
+
+    <p><strong>Sonhos:</strong> Morar nos EUA 🇺🇸 e conhecer a Times Square</p>
+
+    <a class="btn" href="#projetos">Ver Projetos</a>
+  </div>
+
+  <img src="https://tr.rbxcdn.com/180DAY-d006baea70dc015028e3ec50dd3095fb/768/432/Image/Png/noFilter">
+</section>
+
+<section id="projetos">
+  <h2>Projetos</h2>
+
+  <div class="grid">
+    <div class="card">
+      <h3>Havana Roleplay</h3>
+      <p>Projeto Roblox Roleplay</p>
+      <a class="btn" target="_blank"
+         href="https://www.roblox.com/pt/games/72358924525153/Havana-Roleplay">
+         Acessar
+      </a>
+    </div>
+
+    <div class="card">
+      <h3>Last Owner</h3>
+      <p>Em desenvolvimento</p>
+    </div>
+  </div>
+</section>
+
+<section id="sites">
+  <h2>Sites Criados</h2>
+
+  <div class="grid">
+    <a class="card link" target="_blank" href="https://controlprice.squareweb.app">ControlPrice</a>
+    <a class="card link" target="_blank" href="https://nexcorp-henna.vercel.app">NexCorp</a>
+    <a class="card link" target="_blank" href="https://wikiclarastack.github.io/wikiclarastack/">Wiki Clara Stack</a>
+  </div>
+</section>
+
+<section id="contato">
+  <h2>Contato</h2>
+  <button class="btn" onclick="openTicket()">Abrir Ticket</button>
+</section>
+
+<footer>
+  © 2026 • Silva777only • Nike ❤️
+</footer>
+
+<!-- MODAL -->
+<div class="modal" id="ticketModal">
+  <div class="modal-content">
+    <h3>Abrir Ticket</h3>
+    <input id="email" type="email" placeholder="Seu email">
+    <select id="motivo">
+      <option value="">Selecione o motivo</option>
+      <option>Projeto</option>
+      <option>Orçamento</option>
+      <option>Dúvida</option>
+      <option>Outro</option>
+    </select>
+    <textarea id="mensagem" placeholder="Mensagem"></textarea>
+    <button class="btn" onclick="enviarTicket()">Enviar</button>
+  </div>
+</div>
+
+<script type="module" src="script.js"></script>
+</body>
+</html>
