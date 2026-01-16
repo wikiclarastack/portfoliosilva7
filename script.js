@@ -14,27 +14,37 @@ const firebaseConfig = {
 const app = initializeApp(firebaseConfig);
 const db = getDatabase(app);
 
-window.openTicket = () => {
-  document.getElementById("ticketModal").classList.add("active");
-};
+// ===== SUPORTE =====
+window.sendTicket = () => {
+  const email = ticketEmail.value;
+  const reason = ticketReason.value;
+  const msg = ticketMsg.value;
 
-window.enviarTicket = () => {
-  const email = document.getElementById("email").value;
-  const motivo = document.getElementById("motivo").value;
-  const mensagem = document.getElementById("mensagem").value;
-
-  if (!email || !motivo || !mensagem) {
-    alert("Preencha todos os campos");
+  if (!email || !msg) {
+    ticketStatus.innerText = "Preencha tudo.";
     return;
   }
 
   push(ref(db, "tickets"), {
     email,
-    motivo,
-    mensagem,
-    data: new Date().toISOString()
+    reason,
+    msg,
+    date: new Date().toISOString()
   });
 
-  alert("Ticket enviado com sucesso!");
-  document.getElementById("ticketModal").classList.remove("active");
+  ticketStatus.innerText = "Ticket enviado com sucesso!";
+};
+
+// ===== ADMIN =====
+window.adminLogin = () => {
+  const email = adminEmail.value;
+  adminStatus.innerText =
+    email === "guizinbzsk@gmail.com"
+      ? "Admin autenticado"
+      : "Acesso negado (invasor)";
+};
+
+// ===== IDIOMAS =====
+window.setLang = (lang) => {
+  alert(lang === "pt" ? "Português ativo" : "English active");
 };
