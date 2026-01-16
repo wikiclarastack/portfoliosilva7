@@ -1,90 +1,338 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-br">
 <head>
-  <meta charset="UTF-8">
-  <title>Silva777Only</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <link rel="stylesheet" href="styles.css">
-  <script defer src="script.js"></script>
-
-  <!-- Firebase -->
-  <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-app-compat.js"></script>
-  <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-auth-compat.js"></script>
-  <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-firestore-compat.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Silva777only | Portfólio</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <nav>
+                <div class="logo">
+                    <i class="fas fa-code"></i>
+                    Silva<span>777only</span>
+                </div>
+                <ul class="nav-links">
+                    <li><a href="#home">Início</a></li>
+                    <li><a href="#projects">Projetos</a></li>
+                    <li><a href="#websites">Sites</a></li>
+                    <li><a href="#social">Redes Sociais</a></li>
+                    <li><a href="#favorites">Favoritos</a></li>
+                    <li><a href="#contact">Contato</a></li>
+                </ul>
+                <button class="mobile-menu-btn">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </nav>
+        </div>
+    </header>
 
-<header class="header">
-  <h1>Silva777Only</h1>
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-text slide-left">
+                    <h1>Olá, eu sou <br>Silva777only</h1>
+                    <div class="location">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <p>São Paulo, SP - Zona Oeste</p>
+                    </div>
+                    <div class="faith">
+                        <i class="fas fa-cross"></i>
+                        <p>Amo Jesus Cristo, sou evangélico. Minha fé é a base de tudo que faço.</p>
+                    </div>
+                    <p>Desenvolvedor com mais de 5 anos de experiência em Lua (Roblox) e conhecimentos em HTML, JavaScript e CSS. Apaixonado por criar experiências únicas e funcionais.</p>
+                    <a href="#contact" class="btn pulse-hover" style="margin-top: 20px;">Entre em contato</a>
+                </div>
+                <div class="hero-image slide-right">
+                    <img src="https://images.unsplash.com/photo-1517077304055-6e89abbf09b0?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="Silva777only - Desenvolvedor">
+                </div>
+            </div>
+        </div>
+    </section>
 
-  <div class="actions">
-    <button onclick="toggleLang()">PT / EN</button>
-    <button onclick="openLogin()">Login</button>
-  </div>
-</header>
+    <!-- Projects Section -->
+    <section id="projects" class="projects">
+        <div class="container">
+            <h2 class="animated">Meus Projetos</h2>
+            <div class="projects-grid">
+                <!-- Havana Roleplay -->
+                <div class="project-card animated">
+                    <div class="project-img">
+                        <img src="https://tr.rbxcdn.com/180DAY-d006baea70dc015028e3ec50dd3095fb/768/432/Image/Png/noFilter" alt="Havana Roleplay">
+                    </div>
+                    <div class="project-info">
+                        <h3>Havana Roleplay</h3>
+                        <p>Experiência de roleplay imersiva no Roblox com sistemas avançados e comunidade ativa.</p>
+                        <div class="project-tags">
+                            <span class="tag">Roblox</span>
+                            <span class="tag">Lua</span>
+                            <span class="tag">Roleplay</span>
+                        </div>
+                        <a href="https://www.roblox.com/pt/games/72358924525153/Havana-Roleplay?gameSetTypeId=100000003&homePageSessionInfo=22462e72-a320-47ae-bfdf-07e5a2d7a735&isAd=false&numberOfLoadedTiles=174&page=homePage&placeId=72358924525153&playContext=homePage&position=21&positionInRow=2.3999999999999986&rowOnPage=6&sortPos=3&universeId=9296863260" target="_blank" class="btn">Visitar Projeto</a>
+                    </div>
+                </div>
 
-<section class="hero reveal">
-  <h2 data-pt="Desenvolvedor & Criador"
-      data-en="Developer & Creator"></h2>
+                <!-- Havana Roleplay Screenshot -->
+                <div class="project-card animated">
+                    <div class="project-img">
+                        <img src="https://media.discordapp.net/attachments/1438682169328402594/1459650794394746921/image.png?ex=696b4d7c&is=6969fbfc&hm=6a675b826654fbbd289154546ee58c0e00b3867f2a07ca19f78889572d556304&=&format=webp&quality=lossless&width=958&height=638" alt="Havana Roleplay Screenshot">
+                    </div>
+                    <div class="project-info">
+                        <h3>Havana Roleplay - Screenshots</h3>
+                        <p>Capturas de tela da experiência Havana Roleplay, mostrando a qualidade gráfica e imersão.</p>
+                        <div class="project-tags">
+                            <span class="tag">Roblox</span>
+                            <span class="tag">Screenshots</span>
+                            <span class="tag">Game Design</span>
+                        </div>
+                        <a href="https://www.roblox.com/pt/games/72358924525153/Havana-Roleplay" target="_blank" class="btn">Ver Mais</a>
+                    </div>
+                </div>
 
-  <p data-pt="Projetos, sistemas e experiências reais"
-     data-en="Real projects, systems and experiences"></p>
-</section>
+                <!-- Last Owner -->
+                <div class="project-card animated">
+                    <div class="project-img">
+                        <img src="https://images.unsplash.com/photo-1550745165-9bc0b252726f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="Last Owner">
+                    </div>
+                    <div class="project-info">
+                        <h3>Last Owner (Em Desenvolvimento)</h3>
+                        <p>Novo projeto em desenvolvimento. Uma experiência única no Roblox com mecânicas inovadoras.</p>
+                        <div class="project-tags">
+                            <span class="tag">Roblox</span>
+                            <span class="tag">Lua</span>
+                            <span class="tag">Em Desenvolvimento</span>
+                        </div>
+                        <a href="#" class="btn">Em Breve</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-<section class="projects reveal">
-  <h2>Projetos</h2>
+    <!-- Websites Section -->
+    <section id="websites" class="websites">
+        <div class="container">
+            <h2 class="animated">Sites que Desenvolvi</h2>
+            <div class="websites-list">
+                <div class="website-card animated">
+                    <h3>ControlPrice</h3>
+                    <p>Plataforma para controle de preços e gestão de produtos.</p>
+                    <a href="https://controlprice.squareweb.app" target="_blank" class="btn">Visitar Site</a>
+                </div>
+                <div class="website-card animated">
+                    <h3>NexCorp</h3>
+                    <p>Site corporativo moderno com design responsivo e funcionalidades avançadas.</p>
+                    <a href="https://nexcorp-henna.vercel.app" target="_blank" class="btn">Visitar Site</a>
+                </div>
+                <div class="website-card animated">
+                    <h3>Wiki Clara Stack</h3>
+                    <p>Wiki dedicada à atriz Clara Stack, com informações e curiosidades.</p>
+                    <a href="https://wikiclarastack.github.io/wikiclarastack/" target="_blank" class="btn">Visitar Site</a>
+                </div>
+            </div>
+        </div>
+    </section>
 
-  <div class="cards">
-    <div class="card">
-      <h3>Roblox Systems</h3>
-      <p>Scripts, GUIs, monetização</p>
-    </div>
+    <!-- Social & Groups Section -->
+    <section id="social" class="social">
+        <div class="container">
+            <h2 class="animated">Redes Sociais e Grupos</h2>
+            <div class="social-grid">
+                <!-- Instagram -->
+                <div class="social-card animated">
+                    <div class="social-icon instagram">
+                        <i class="fab fa-instagram"></i>
+                    </div>
+                    <h3>Instagram Profissional</h3>
+                    <p>Meu perfil profissional com atualizações sobre meus projetos.</p>
+                    <a href="https://www.instagram.com/silva777only" target="_blank" class="btn">Seguir</a>
+                </div>
 
-    <div class="card">
-      <h3>Web & Firebase</h3>
-      <p>Login, banco de dados, tickets</p>
-    </div>
-  </div>
-</section>
+                <!-- TikTok -->
+                <div class="social-card animated">
+                    <div class="social-icon tiktok">
+                        <i class="fab fa-tiktok"></i>
+                    </div>
+                    <h3>TikTok Pessoal</h3>
+                    <p>Meu perfil pessoal com conteúdos do dia a dia.</p>
+                    <a href="https://www.tiktok.com/@_silva2k25_?is_from_webapp=1&sender_device=pc" target="_blank" class="btn">Seguir</a>
+                </div>
 
-<section class="actors reveal">
-  <h2>Atores / Team</h2>
+                <!-- Roblox Profile -->
+                <div class="social-card animated">
+                    <div class="social-icon roblox">
+                        <i class="fas fa-gamepad"></i>
+                    </div>
+                    <h3>Perfil Roblox</h3>
+                    <p>Meu perfil profissional na plataforma Roblox.</p>
+                    <a href="https://www.roblox.com/pt/users/8089172473/profile" target="_blank" class="btn">Visitar Perfil</a>
+                </div>
 
-  <div class="actors-grid">
-    <div class="actor">
-      <img src="https://i.imgur.com/6VBx3io.png">
-      <span>Silva</span>
-    </div>
+                <!-- EclipseByte Studios -->
+                <div class="social-card animated">
+                    <div class="social-icon group">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h3>EclipseByte Studios</h3>
+                    <p>Meu grupo de desenvolvimento no Roblox.</p>
+                    <a href="https://www.roblox.com/pt/communities/35815072/EclipseByte-Studios#!/about" target="_blank" class="btn">Visitar Grupo</a>
+                </div>
 
-    <div class="actor">
-      <img src="https://i.imgur.com/JFH3kQh.png">
-      <span>Developer</span>
-    </div>
-  </div>
-</section>
+                <!-- Havana Roleplay Group -->
+                <div class="social-card animated">
+                    <div class="social-icon group">
+                        <i class="fas fa-building"></i>
+                    </div>
+                    <h3>Havana Roleplay</h3>
+                    <p>Grupo oficial do Havana Roleplay no Roblox.</p>
+                    <a href="https://www.roblox.com/pt/communities/158319639/Guaruj-Roleplay#!/about" target="_blank" class="btn">Visitar Grupo</a>
+                </div>
 
-<section class="support reveal" id="support">
-  <h2>Suporte</h2>
+                <!-- Havana Roleplay Polícia -->
+                <div class="social-card animated">
+                    <div class="social-icon group">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h3>Havana Roleplay - Polícia</h3>
+                    <p>Grupo da polícia militar no Havana Roleplay.</p>
+                    <a href="https://www.roblox.com/pt/communities/206475425/Havana-Roleplay-Pol-cia#!/about" target="_blank" class="btn">Visitar Grupo</a>
+                </div>
+            </div>
+        </div>
+    </section>
 
-  <button onclick="openTicket()">Abrir Ticket</button>
+    <!-- Favorites Section -->
+    <section id="favorites" class="favorites">
+        <div class="container">
+            <h2 class="animated">Meus Favoritos</h2>
+            <div class="favorites-container">
+                <!-- Nike -->
+                <div class="favorite-card animated">
+                    <div class="nike-logo">
+                        <i class="fab fa-nike"></i>
+                    </div>
+                    <h3>Minha Marca Favorita</h3>
+                    <p>NIKE - Just Do It. Adoro o design, qualidade e a filosofia da marca.</p>
+                </div>
 
-  <div id="ticketBox" class="ticket hidden">
-    <textarea placeholder="Descreva seu problema"></textarea>
-    <button onclick="sendTicket()">Enviar</button>
-  </div>
-</section>
+                <!-- Sonhos -->
+                <div class="favorite-card animated">
+                    <div class="favorite-img">
+                        <img src="https://images.unsplash.com/photo-1496442226666-8d4d0e62e6e9?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="Times Square">
+                    </div>
+                    <h3>Meus Sonhos</h3>
+                    <p>Morar nos Estados Unidos e conhecer a Times Square em Nova York.</p>
+                </div>
 
-<!-- LOGIN MODAL -->
-<div class="modal hidden" id="loginModal">
-  <div class="modal-content">
-    <h3>Login</h3>
-    <input type="email" id="email" placeholder="Email">
-    <input type="password" id="password" placeholder="Senha">
-    <button onclick="login()">Entrar</button>
-    <button onclick="closeLogin()">Fechar</button>
-  </div>
-</div>
+                <!-- Matilda Lawler -->
+                <div class="favorite-card animated">
+                    <div class="favorite-img">
+                        <img src="https://media.discordapp.net/attachments/1403709856111788062/1461814177546108971/image.png?ex=696bec0b&is=696a9a8b&hm=24d7368effbcc8615dc4c0e14d5492d114e08228263a28d798adf78167084e83&=&format=webp&quality=lossless&width=402&height=214" alt="Matilda Lawler">
+                    </div>
+                    <h3>Matilda Lawler</h3>
+                    <p>Atriz de "Welcome to Derry!" que admiro muito.</p>
+                </div>
 
+                <!-- Clara Stack -->
+                <div class="favorite-card animated">
+                    <div class="favorite-img">
+                        <img src="https://i.pinimg.com/236x/dc/b1/6a/dcb16a41f7f8b69befd855bddb27a51b.jpg" alt="Clara Stack">
+                    </div>
+                    <h3>Clara Stack</h3>
+                    <p>Atriz incrível que também é uma das minhas favoritas.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2 class="animated">Entre em Contato</h2>
+            <div class="contact-container">
+                <!-- Contact Form -->
+                <div class="contact-form animated">
+                    <h3>Envie uma Mensagem</h3>
+                    <form id="ticketForm">
+                        <div class="form-group">
+                            <label for="name">Nome</label>
+                            <input type="text" id="name" class="form-control" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">E-mail</label>
+                            <input type="email" id="email" class="form-control" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="reason">Motivo do Contato</label>
+                            <select id="reason" class="form-control" required>
+                                <option value="">Selecione um motivo</option>
+                                <option value="Projeto Roblox">Projeto Roblox</option>
+                                <option value="Desenvolvimento Web">Desenvolvimento Web</option>
+                                <option value="Colaboração">Colaboração</option>
+                                <option value="Orçamento">Orçamento</option>
+                                <option value="Outro">Outro</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Mensagem</label>
+                            <textarea id="message" class="form-control" rows="5" required></textarea>
+                        </div>
+                        <button type="submit" class="btn">Enviar Mensagem</button>
+                        <p id="formMessage" style="margin-top: 15px; display: none;"></p>
+                    </form>
+                </div>
+
+                <!-- Admin Panel -->
+                <div class="admin-panel animated">
+                    <h3><i class="fas fa-lock"></i> Painel Administrativo</h3>
+                    <p>Apenas o e-mail <strong>silva777only@admin.com</strong> tem acesso a este painel. Qualquer outro acesso é considerado invasão.</p>
+                    
+                    <div class="form-group" style="margin-top: 20px;">
+                        <label for="adminEmail">E-mail Administrador</label>
+                        <input type="email" id="adminEmail" class="form-control" placeholder="Digite seu e-mail de administrador">
+                    </div>
+                    <div class="form-group">
+                        <label for="adminPassword">Senha</label>
+                        <input type="password" id="adminPassword" class="form-control" placeholder="Digite sua senha">
+                    </div>
+                    <button id="loginBtn" class="btn">Acessar Painel</button>
+                    
+                    <div id="ticketList" class="ticket-list" style="display: none; margin-top: 30px;">
+                        <h4>Tickets Recebidos</h4>
+                        <div id="ticketsContainer">
+                            <!-- Tickets serão carregados aqui -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="logo" style="margin-bottom: 20px;">
+                    <i class="fas fa-code"></i>
+                    Silva<span>777only</span>
+                </div>
+                <p>Desenvolvedor com paixão por criar experiências incríveis no Roblox e na Web.</p>
+                <div class="copyright">
+                    &copy; 2025 Silva777only. Todos os direitos reservados.
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Firebase SDK -->
+    <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-database-compat.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
