@@ -1,0 +1,16 @@
+{
+  "name": "silva777only-portfolio",
+  "version": "1.0.0",
+  "description": "Portfolio website with secure admin panel",
+  "scripts": {
+    "dev": "vercel dev",
+    "deploy": "vercel --prod"
+  },
+  "dependencies": {
+    "firebase": "^9.6.10",
+    "firebase-admin": "^11.5.0"
+  },
+  "devDependencies": {
+    "@vercel/node": "^2.9.7"
+  }
+}
